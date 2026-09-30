@@ -7,7 +7,7 @@ if (idade <= 7)
     // Caminho seguido se a verificação acima for verdadeiro
     Console.WriteLine("Você pagará meia entrada.");
 }
- 
+else
 {
     Console.WriteLine("Você pagará entrada inteira.");
 }

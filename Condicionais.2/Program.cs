@@ -1,14 +1,15 @@
-﻿// Crie uma variável chamada "idade" e atribua o valor 18 a ela
-int idade = 70;
-// Crie uma variável chamada "valorIngresso" e atribua o valor 30.00 a ela
-double valorIngresso = 30.00;
-// Criar um bloco de condição testando se a idade é menor ou igual à 7
-if (idade <= 7 || idade >= 60)
-// if (idade is <= 7 or >= 60 )
-{
-    // Dentro do bloco da condição, você terá que calcular a metade do valor do ingresso e atribui-lo novamente à variável "valorIngresso"
-    valorIngresso = valorIngresso / 2;
+﻿double valorIngresso = 30.00; // Cria uma variável chamada "valorIngresso" e atribui o valor 30.00 a ela
+int idade = 18; // Cria uma variável chamada "idade" e atribui o valor 18 a ela
+bool ehEstudante = true; // Cria uma variável chamada "ehEstudante" e atribui um valor que possibilite entender que o usuário é um estudante
+bool clienteVIP = true; // Cria uma variável chamada "clienteVIP" e atribui um valor que possibilite entender que o usuário é um cliente VIP
+
+if (clienteVIP) // Verifica se o cliente é VIP
+{ // Caso seja cliente VIP
+    valorIngresso *= 0.4; // Aplica 60% de desconto
 }
-// Exiba a informação abaixo:
-// "O valor do ingresso a pagar é R$ ??"
-Console.WriteLine($"O valor do ingresso a pagar é R$ {valorIngresso}!");
+else if (idade <= 7 || idade >= 60 || ehEstudante) // Verifica se é criança, idoso ou estudante
+{ // Caso seja criança, idoso ou estudante
+    valorIngresso = valorIngresso * 0.5; // Aplica 50% de desconto
+}
+
+Console.WriteLine($"O valor do ingresso a pagar é R$ {valorIngresso}!"); // Exibe a informação: "O valor do ingresso a pagar é R$ ??"
